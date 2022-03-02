@@ -30,6 +30,9 @@ class Loading {
 
   static void show([String? text]) {
     EasyLoading.instance.userInteractions = false;
+    EasyLoading.instance..indicatorWidget = Container(
+
+    );
     EasyLoading.show(status: text ?? 'loading...');
   }
 
