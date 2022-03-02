@@ -8,9 +8,14 @@ class WelcomeView extends GetView<WelcomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('测试'),
+        child: TextButton(
+          onPressed: (){
+            controller.toHome();
+          },
+          child: const Text('确定'),
+        ),
       ),
     );
   }

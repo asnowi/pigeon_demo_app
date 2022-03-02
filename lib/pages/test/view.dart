@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pigeon_demo_app/common/utils/utils.dart';
 
 import 'test.dart';
 
@@ -9,8 +10,19 @@ class TestView extends GetView<TestController>{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('测试页')),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TextButton(onPressed: (){
+            Loading.show();
+          }, child: const Text('loading show')),
+          TextButton(onPressed: (){
+            Loading.dismiss();
+          }, child: const Text('loading dismiss'))
+        ],
+      )
     );
   }
 

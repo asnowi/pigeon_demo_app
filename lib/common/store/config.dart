@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:package_info/package_info.dart';
 import 'package:pigeon_demo_app/common/config/config.dart';
 import 'package:pigeon_demo_app/common/services/services.dart';
+import 'package:pigeon_demo_app/common/utils/utils.dart';
 
 class ConfigStore extends GetxController {
   static ConfigStore get to => Get.find();
@@ -21,6 +22,7 @@ class ConfigStore extends GetxController {
   void onInit() {
     super.onInit();
     isHomeOpen = StorageService.to.getBool(SaveInfoKey.FIRST_OPEN);
+    LogUtils.GGQ('isHomeOpen-->${isHomeOpen}');
   }
 
   Future<void> getPlatform() async {
@@ -29,7 +31,7 @@ class ConfigStore extends GetxController {
 
   // 标记用户已打开APP
   Future<bool> saveAlreadyOpen() {
-    return StorageService.to.setBool(SaveInfoKey.FIRST_OPEN, false);
+    return StorageService.to.setBool(SaveInfoKey.FIRST_OPEN, true);
   }
 
   void onInitLocale() {

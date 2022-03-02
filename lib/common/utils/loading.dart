@@ -10,31 +10,27 @@ class Loading {
       ..indicatorType = EasyLoadingIndicatorType.ring
       ..loadingStyle = EasyLoadingStyle.custom
       ..indicatorSize = 35.0
-      ..lineWidth = 2
+      ..lineWidth = 1.0
       ..radius = 10.0
       ..progressColor = Colors.white
-      ..backgroundColor = Colors.black.withOpacity(0.7)
-      ..indicatorColor = Colors.white
-      ..textColor = Colors.white
+      ..backgroundColor = Colors.white
+      ..textColor = Colors.black.withOpacity(0.7)
       ..maskColor = Colors.black.withOpacity(0.6)
+      ..indicatorColor = Colors.black
       ..userInteractions = true
       ..dismissOnTap = false
       ..maskType = EasyLoadingMaskType.custom
       ..indicatorWidget = Container(
-        color: Colors.black,
-        width: 42.0,
-        height: 42.0,
+        color: Colors.white,
+        width: 32.0,
+        height: 48.0,
         child: Lottie.asset(AssetsProvider.lottiePath('loading')),
       );
   }
 
   static void show([String? text]) {
     EasyLoading.instance.userInteractions = false;
-    EasyLoading.show(status: text ?? 'Loading...');
-  }
-
-  static void toast(String text) {
-    EasyLoading.showToast(text);
+    EasyLoading.show(status: text ?? 'loading...');
   }
 
   static void dismiss() {
