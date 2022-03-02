@@ -3,9 +3,9 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:pigeon_demo_app/common/config/config.dart';
-import 'package:pigeon_demo_app/common/entity/user.dart';
+import 'package:pigeon_demo_app/common/services/services.dart';
 
-import '../services/services.dart';
+import 'store.dart';
 
 class UserStore extends GetxController {
   static UserStore get to => Get.find();

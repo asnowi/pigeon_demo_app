@@ -8,14 +8,14 @@ Widget inputTextEdit({
   TextInputType keyboardType = TextInputType.text,
   String? hintText,
   bool isPassword = false,
-  double marginTop = 15,
+  double marginTop = 15.0,
   bool autofocus = false,
 }) {
   return Container(
     height: 44.h,
     margin: EdgeInsets.only(top: marginTop.h),
     decoration: const BoxDecoration(
-      color: AppColors.secondaryElement,
+      color: AppColors.second,
       borderRadius: Radii.k6pxRadius,
     ),
     child: TextField(
@@ -53,8 +53,8 @@ Widget inputEmailEdit({
   return Container(
     height: 44.h,
     margin: EdgeInsets.only(top: marginTop.h),
-    decoration: BoxDecoration(
-      color: AppColors.primaryBackground,
+    decoration: const BoxDecoration(
+      color: AppColors.background,
       borderRadius: Radii.k6pxRadius,
       boxShadow: [
         BoxShadow(

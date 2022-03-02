@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'color.dart';
+import 'values.dart';
+
 
 class AppTheme {
   static const horizontalMargin = 16.0;
@@ -8,42 +9,42 @@ class AppTheme {
 
   static ThemeData light = ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: AppColor.scaffoldBackground,
+    scaffoldBackgroundColor: AppColors.background,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
-    primaryColor: AppColor.accentColor,
+    primaryColor: AppColors.primaryText,
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      secondary: AppColor.accentColor,
+      secondary: AppColors.secondText,
     ),
     appBarTheme: const AppBarTheme(
       elevation: 0.0,
       centerTitle: true,
       backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-        color: AppColor.primaryText,
+        color: AppColors.primaryText,
       ),
       titleTextStyle: TextStyle(
-        color: AppColor.primaryText,
+        color: AppColors.primaryText,
         fontSize: 20.0,
         fontWeight: FontWeight.w500,
       ),
       toolbarTextStyle: TextStyle(
-        color: AppColor.primaryText,
+        color: AppColors.primaryText,
         fontSize: 20.0,
         fontWeight: FontWeight.w500,
       ),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: AppColor.scaffoldBackground,
+      backgroundColor: AppColors.background,
       unselectedLabelStyle: TextStyle(fontSize: 12),
       selectedLabelStyle: TextStyle(fontSize: 12),
-      unselectedItemColor: Color(0xffA2A5B9),
-      selectedItemColor: AppColor.accentColor,
+      unselectedItemColor: AppColors.unselected,
+      selectedItemColor: AppColors.selected,
     ),
     tabBarTheme: const TabBarTheme(
       indicatorSize: TabBarIndicatorSize.label,
-      labelColor: AppColor.accentColor,
-      unselectedLabelColor: AppColor.secondaryText,
+      labelColor: AppColors.primaryText,
+      unselectedLabelColor: AppColors.unselected,
     ),
   );
 }

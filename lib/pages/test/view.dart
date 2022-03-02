@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pigeon_demo_app/common/apis/apis.dart';
+import 'package:pigeon_demo_app/common/entity/login_entity.dart';
 import 'package:pigeon_demo_app/common/utils/utils.dart';
 
 import 'test.dart';
@@ -20,7 +22,11 @@ class TestView extends GetView<TestController>{
           }, child: const Text('loading show')),
           TextButton(onPressed: (){
             Loading.toast('toast');
-          }, child: const Text('toast show'))
+          }, child: const Text('toast show')),
+          TextButton(onPressed: () async{
+            LoginEntity? data = await ApiService.login();
+            Loading.toast(data?.message?? '');
+          }, child: const Text('login')),
         ],
       )
     );

@@ -6,8 +6,8 @@ import 'package:pigeon_demo_app/common/values/values.dart';
 /// 缓存图片
 Widget netImageCached(
   String url, {
-  double width = 48,
-  double height = 48,
+  double width = 48.0,
+  double height = 48.0,
   EdgeInsetsGeometry? margin,
 }) {
   return CachedNetworkImage(

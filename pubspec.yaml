@@ -58,6 +58,7 @@ dependencies:
   dio: ^4.0.4
   dio_cookie_manager: ^2.0.0
   cookie_jar: ^3.0.1
+  dio_cache_interceptor: ^3.2.6
 
   # 缓存
   shared_preferences: ^2.0.11

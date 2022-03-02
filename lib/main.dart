@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:pigeon_demo_app/common/langs/langs.dart';
 import 'package:pigeon_demo_app/common/router/router.dart';
 import 'package:pigeon_demo_app/common/store/store.dart';
-import 'package:pigeon_demo_app/common/style/style.dart';
+import 'package:pigeon_demo_app/common/values/values.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'common/app/app.dart';

@@ -1,4 +1,5 @@
 library store;
 
-export './user.dart';
-export './config.dart';
+export 'config.dart';
+export 'user.dart';
+export 'userinfo.dart';
