@@ -19,21 +19,22 @@ class Loading {
       ..indicatorColor = Colors.black
       ..userInteractions = true
       ..dismissOnTap = false
-      ..maskType = EasyLoadingMaskType.custom
-      ..indicatorWidget = Container(
-        color: Colors.white,
-        width: 32.0,
-        height: 48.0,
-        child: Lottie.asset(AssetsProvider.lottiePath('loading')),
-      );
+      ..maskType = EasyLoadingMaskType.custom;
   }
 
   static void show([String? text]) {
     EasyLoading.instance.userInteractions = false;
-    EasyLoading.instance..indicatorWidget = Container(
-
+    EasyLoading.instance.indicatorWidget = Container(
+      color: Colors.white,
+      width: 32.0,
+      height: 48.0,
+      child: Lottie.asset(AssetsProvider.lottiePath('loading')),
     );
     EasyLoading.show(status: text ?? 'loading...');
+  }
+
+  static void toast(String text) {
+    EasyLoading.showToast(text);
   }
 
   static void dismiss() {

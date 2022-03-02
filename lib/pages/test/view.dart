@@ -19,8 +19,8 @@ class TestView extends GetView<TestController>{
             Loading.show();
           }, child: const Text('loading show')),
           TextButton(onPressed: (){
-            Loading.dismiss();
-          }, child: const Text('loading dismiss'))
+            Loading.toast('toast');
+          }, child: const Text('toast show'))
         ],
       )
     );
