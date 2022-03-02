@@ -14,14 +14,13 @@ class SplashController extends GetxController {
     super.onInit();
   }
 
-
   @override
   void onReady() {
     LogUtils.GGQ('启动页---> onReady');
-    if(ConfigStore.to.isFirstOpen) {
-      Get.offAndToNamed(AppRoutes.WELCOME);
-    } else {
+    if(ConfigStore.to.isHomeOpen) {
       Get.offAndToNamed(AppRoutes.HOME);
+    } else {
+      Get.offAndToNamed(AppRoutes.WELCOME);
     }
     super.onReady();
   }

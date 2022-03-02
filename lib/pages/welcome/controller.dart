@@ -12,7 +12,7 @@ class WelcomeController extends GetxController{
 
   @override
   void onReady() {
-    this.setHasFirst();
+    setHasFirst();
     super.onReady();
   }
 }

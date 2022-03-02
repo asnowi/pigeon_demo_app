@@ -7,7 +7,7 @@ import 'package:pigeon_demo_app/common/services/services.dart';
 class ConfigStore extends GetxController {
   static ConfigStore get to => Get.find();
 
-  bool isFirstOpen = false;
+  bool isHomeOpen = false;
   PackageInfo? _platform;
   String get version => _platform?.version ?? '-';
   bool get isRelease => const bool.fromEnvironment("dart.vm.product");
@@ -20,7 +20,7 @@ class ConfigStore extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    isFirstOpen = StorageService.to.getBool(SaveInfoKey.FIRST_OPEN);
+    isHomeOpen = StorageService.to.getBool(SaveInfoKey.FIRST_OPEN);
   }
 
   Future<void> getPlatform() async {

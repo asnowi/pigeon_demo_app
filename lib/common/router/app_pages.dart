@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pigeon_demo_app/pages/splash/splash.dart';
 import 'package:pigeon_demo_app/pages/home/home.dart';
 import 'package:pigeon_demo_app/pages/login/login.dart';
+import 'package:pigeon_demo_app/pages/test/test.dart';
+import 'package:pigeon_demo_app/pages/unknown/unknown.dart';
 import 'package:pigeon_demo_app/pages/welcome/welcome.dart';
 import 'package:get/get.dart';
 
@@ -51,6 +54,23 @@ class AppPages {
       transition: Transition.fadeIn,
       // transitionDuration: _transitionDuration,
     ),
+
+    /// 测试页
+    GetPage(
+      name: AppRoutes.TEST,
+      page: () => const TestView(),
+      binding: TestBinding(),
+      transition: Transition.fadeIn,
+      // transitionDuration: _transitionDuration,
+    ),
   ];
 
+  // // 未知页
+  static GetPage unknownPage(){
+    return GetPage(
+    name: AppRoutes.UNKNOWN,
+    page: () => const UnknownView(),
+    binding: UnknownBinding(),
+    transition: Transition.fadeIn);
+  }
 }

@@ -9,7 +9,9 @@ class WelcomeView extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text('欢迎页')),
+      body: Center(
+        child: Text('测试'),
+      ),
     );
   }
 
